@@ -1,0 +1,775 @@
+irun(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s086: Started on Feb 29, 2024 at 09:15:40 +06
+irun
+	-f filelist.f
+		+incdir+../rtl_sadman
+		../rtl_sadman/top.sv
+		../rtl_sadman/sta_sto_gen.sv
+		../rtl_sadman/standard_macros.sv
+		../rtl_sadman/scl_gen.sv
+		../rtl_sadman/mst_ctrl_fsm.sv
+		../rtl_sadman/edge_det.sv
+		../rtl_sadman/apb_i2c_man_sub_intf.sv
+		../rtl_sadman/apb_sub.sv
+		../tb/tb_top/APB_I2C_master_interface.sv
+		../RAL_model/APB_I2C_master_ral_model.sv
+		+incdir+../tb/agents/I2C_agent/
+		../tb/agents/I2C_agent/I2C_agent_pkg.sv
+		+incdir+../tb/agents/APB_agent/
+		../tb/agents/APB_agent/apb_agent_pkg.sv
+		+incdir+../tb/env/
+		../tb/env/env_pkg.sv
+		+incdir+../tb/seqlib/
+		../tb/seqlib/seqlib_pkg.sv
+		+incdir+../tb/tests/
+		../tb/tests/test_pkg.sv
+		../tb/tb_top/tb_top_APB_I2C_master.sv
+	-gui
+	-access +rwc
+	-uvm
+	+UVM_NO_RELNOTES
+	-timescale 1ns/1ps
+	+UVM_TESTNAME=APB_I2C_master_reset_test
+	+UVM_VERBOSITY=UVM_DEBUG
+	+test_itter=1
+	-define assert_off
+	-seed random
+	-s
+
+   User defined plus("+") options:
+	+UVM_NO_RELNOTES
+	+UVM_VERBOSITY=UVM_DEBUG
+	+test_itter=1
+
+Recompiling... reason: file '../tb/env/APB_I2C_master_environment.sv' is newer than expected.
+	expected: Thu Feb 29 09:14:59 2024
+	actual:   Thu Feb 29 09:15:37 2024
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d
+file: ../rtl_sadman/scl_gen.sv
+	output  logic                               scl_gen_comp_match,   // SCL generator internal clock clear signal 
+	     |
+ncvlog: *W,POLICI (../rtl_sadman/scl_gen.sv,20|6): comma assumed just prior to this symbol to separate declarations in ANSI port list.
+file: ../tb/env/env_pkg.sv
+	package worklib.env_pkg:sv
+		errors: 0, warnings: 0
+file: ../tb/seqlib/seqlib_pkg.sv
+            reg_blk.TWSR.randomize();
+                                 |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,100|33): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 100, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+            reg_blk.TWBR.randomize();
+                                 |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,106|33): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 106, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+        reg_blk.TWBR.randomize();
+                             |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,195|29): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 195, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+        reg_blk.TWBR.randomize();
+                             |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,197|29): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 197, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                    reg_blk.TWDR.randomize();
+                                         |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1582|41): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1582, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+            reg_blk.TWDR.randomize();
+                                 |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1599|33): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1599, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                            reg_blk.TWDR.randomize();
+                                                 |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1617|49): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1617, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                    reg_blk.TWDR.randomize();
+                                         |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1627|41): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1627, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                            reg_blk.TWDR.randomize();
+                                                 |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1646|49): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1646, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                    reg_blk.TWDR.randomize();
+                                         |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1655|41): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1655, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,226|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,226|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,227|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,227|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,228|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,228|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,229|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,229|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,233|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,233|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,236|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,236|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,239|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,239|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,242|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,242|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,251|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,251|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,252|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,252|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,253|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,253|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);            
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,254|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);            
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,254|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,259|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,259|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,262|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,262|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,265|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,265|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);            
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,268|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);            
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,268|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,2053|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,2053|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+	package worklib.seqlib_pkg:sv
+		errors: 0, warnings: 44
+file: ../tb/tests/test_pkg.sv
+	package worklib.test_pkg:sv
+		errors: 0, warnings: 0
+file: ../tb/tb_top/tb_top_APB_I2C_master.sv
+	module worklib.tb_top_APB_I2C_master:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+) u_bit_count_comparator (
+                       |
+ncelab: *W,CUVWSP (../rtl_sadman/top.sv,200|23): 2 output ports were not connected:
+ncelab: (../rtl_sadman/standard_macros.sv,314): g
+ncelab: (../rtl_sadman/standard_macros.sv,315): l
+
+) u_comparator_nbit_bit_cnt(
+                          |
+ncelab: *W,CUVWSP (../rtl_sadman/scl_gen.sv,65|26): 2 output ports were not connected:
+ncelab: (../rtl_sadman/standard_macros.sv,314): g
+ncelab: (../rtl_sadman/standard_macros.sv,315): l
+
+) u_comparator_nbit_start(
+                        |
+ncelab: *W,CUVWSP (../rtl_sadman/scl_gen.sv,96|24): 2 output ports were not connected:
+ncelab: (../rtl_sadman/standard_macros.sv,314): g
+ncelab: (../rtl_sadman/standard_macros.sv,315): l
+
+) u_half_adder_1_plus_m1(
+                       |
+ncelab: *W,CUVWSP (../rtl_sadman/scl_gen.sv,121|23): 1 output port was not connected:
+ncelab: (../rtl_sadman/standard_macros.sv,96): carry_out
+
+) u_half_adder_16_plus_m2(
+                        |
+ncelab: *W,CUVWSP (../rtl_sadman/scl_gen.sv,146|24): 1 output port was not connected:
+ncelab: (../rtl_sadman/standard_macros.sv,96): carry_out
+
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		APB_I2C_master_ral_model
+		apb_agent_pkg
+		I2C_agent_pkg
+		env_pkg
+		seqlib_pkg
+		test_pkg
+		$unit_0x47cf98d3
+		tff
+		jkff
+		full_adder
+		priority_encoder
+		mux81
+		tb_top_APB_I2C_master
+`uvm_analysis_imp_decl(_I2C_mnt2scb)
+                                   |
+ncelab: *W,FUNTSK (../tb/env/APB_I2C_master_scoreboard.sv,2|35): function called as a task without void'().
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    .mst_ctrl_fsm_twsr_d_sel            (mst_ctrl_fsm_twsr_d_sel[STATUS_SEL_WIDTH-1:0]),
+                                                               |
+ncelab: *W,CUVMPW (../rtl_sadman/top.sv,146|63): port sizes differ in port connection (4/5).
+    .mst_ctrl_fsm_twdr_mode             (mst_ctrl_fsm_twdr_mode[MODE_WIDTH-1:0]),
+                                                              |
+ncelab: *W,CUVMPW (../rtl_sadman/top.sv,148|62): port sizes differ in port connection (2/3).
+	.a              (h2[15:0]/2), 
+	                         |
+ncelab: *W,CUVMPW (../rtl_sadman/scl_gen.sv,67|26): port sizes differ in port connection (32/16).
+	.a              (h2[15:0]), 
+	                  |
+ncelab: *W,CUVMPW (../rtl_sadman/scl_gen.sv,98|19): port sizes differ in port connection (16/17).
+    .mst_ctrl_fsm_twsr_d_sel            (mst_ctrl_fsm_twsr_d_sel[STATUS_SEL_WIDTH-1:0]),
+                                                               |
+ncelab: *W,CUVMPW (../rtl_sadman/top.sv,146|63): port sizes differ in port connection (4/5).
+    .mst_ctrl_fsm_twdr_mode             (mst_ctrl_fsm_twdr_mode[MODE_WIDTH-1:0]),
+                                                              |
+ncelab: *W,CUVMPW (../rtl_sadman/top.sv,148|62): port sizes differ in port connection (2/3).
+	.a              (h2[15:0]/2), 
+	                         |
+ncelab: *W,CUVMPW (../rtl_sadman/scl_gen.sv,67|26): port sizes differ in port connection (32/16).
+	.a              (h2[15:0]), 
+	                  |
+ncelab: *W,CUVMPW (../rtl_sadman/scl_gen.sv,98|19): port sizes differ in port connection (16/17).
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.APB_I2C_master_interface:sv <0x22a2d50b>
+			streams:   8, words:  3240
+		worklib.APB_I2C_master_interface:sv <0x4e26705c>
+			streams:   8, words:  3240
+		worklib.apb_i2c_man_sub_intf:sv <0x122129f5>
+			streams:  44, words: 16049
+		worklib.apb_sub:sv <0x67d988f6>
+			streams:   9, words:  3538
+		worklib.barrel_shifter_nbit:sv <0x18e61958>
+			streams:   1, words:   429
+		worklib.barrel_shifter_nbit:sv <0x30c68947>
+			streams:   1, words:   402
+		worklib.comparator_nbit:sv <0x039835b5>
+			streams:   3, words:   555
+		worklib.comparator_nbit:sv <0x51ebc7de>
+			streams:   3, words:   555
+		worklib.comparator_nbit:sv <0x6e5201ce>
+			streams:   3, words:   531
+		worklib.counter_nbit:sv <0x43c37f21>
+			streams:   7, words:  2901
+		worklib.counter_nbit:sv <0x75605c4a>
+			streams:   7, words:  2901
+		worklib.counter_nbit:sv <0x7c8bedfe>
+			streams:   7, words:  2833
+		worklib.dff:sv <0x19caee14>
+			streams:   3, words:   877
+		worklib.dff:sv <0x1dfa15fe>
+			streams:   3, words:   859
+		worklib.dff:sv <0x28b63aa4>
+			streams:   3, words:   897
+		worklib.dff:sv <0x4a0916fc>
+			streams:   3, words:   877
+		worklib.dff:sv <0x4c3957ed>
+			streams:   3, words:   859
+		worklib.dff:sv <0x6f2a2d66>
+			streams:   3, words:   897
+		worklib.dff:sv <0x7769d46c>
+			streams:   3, words:   841
+		worklib.edge_det:sv <0x3002c10e>
+			streams:   3, words:   931
+		worklib.env_pkg:sv <0x28a673ea>
+			streams:   0, words:     0
+		worklib.full_adder:sv <0x6a5a5e69>
+			streams:   1, words:   272
+		worklib.half_adder:sv <0x15917415>
+			streams:   1, words:   315
+		worklib.half_adder:sv <0x6f9e2f13>
+			streams:   1, words:   336
+		worklib.jkff:sv <0x5a43e11d>
+			streams:   2, words:   686
+		worklib.mst_ctrl_fsm:sv <0x5670db93>
+			streams:  26, words: 18156
+		worklib.mux16_1:sv <0x58c379be>
+			streams:   1, words:  1595
+		worklib.mux41:sv <0x1c7566c5>
+			streams:   1, words:   439
+		worklib.mux41:sv <0x738c8e22>
+			streams:   1, words:   497
+		worklib.mux81:sv <0x6f5c778c>
+			streams:   1, words:   799
+		worklib.priority_encoder:sv <0x712f588e>
+			streams:   1, words:   342
+		worklib.scl_gen:sv <0x2f4e1a0d>
+			streams:  32, words:  8085
+		worklib.seqlib_pkg:sv <0x133e011c>
+			streams:   0, words:     0
+		worklib.seqlib_pkg:sv <0x19260478>
+			streams:  38, words: 101248
+		worklib.shift_reg_nbit:sv <0x0297d133>
+			streams:   6, words:  2171
+		worklib.sta_sto_gen:sv <0x58af9dfb>
+			streams:  10, words:  2690
+		worklib.tb_top_APB_I2C_master:sv <0x7435df6a>
+			streams: 234, words: 236418
+		worklib.test_pkg:sv <0x06869539>
+			streams:   0, words:     0
+		worklib.test_pkg:sv <0x2a108529>
+			streams:  47, words: 161242
+		worklib.tff:sv <0x27e25156>
+			streams:   2, words:   384
+		worklib.top:sv <0x2aef0428>
+			streams: 113, words: 30290
+		worklib.uvm_pkg:sv <0x031d61e0>
+			streams:  33, words: 113701
+		worklib.uvm_pkg:sv <0x03d03493>
+			streams:  33, words: 80090
+		worklib.uvm_pkg:sv <0x079b60c6>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x0820c9e7>
+			streams:  25, words: 58073
+		worklib.uvm_pkg:sv <0x099ee327>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x0e5155b1>
+			streams:  25, words: 37198
+		worklib.uvm_pkg:sv <0x0ebdfa0d>
+			streams:  29, words: 66839
+		worklib.uvm_pkg:sv <0x113d627c>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x134fc6b0>
+			streams:  27, words: 78170
+		worklib.uvm_pkg:sv <0x13f1eca0>
+			streams:  27, words: 37092
+		worklib.uvm_pkg:sv <0x17650a9a>
+			streams:  31, words: 56405
+		worklib.uvm_pkg:sv <0x1781fe14>
+			streams: 219, words: 339332
+		worklib.uvm_pkg:sv <0x195ee367>
+			streams:  49, words: 91463
+		worklib.uvm_pkg:sv <0x1ac0b783>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x1d8e9f26>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x1fc19b18>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x23f508ce>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x242f2be8>
+			streams:  29, words: 75506
+		worklib.uvm_pkg:sv <0x2a06dcde>
+			streams:  93, words: 183840
+		worklib.uvm_pkg:sv <0x2c8f5cbb>
+			streams: 129, words: 225026
+		worklib.uvm_pkg:sv <0x2d0a14ac>
+			streams:  25, words: 32537
+		worklib.uvm_pkg:sv <0x2d66b611>
+			streams: 110, words: 227820
+		worklib.uvm_pkg:sv <0x2d8922a8>
+			streams:  31, words: 88281
+		worklib.uvm_pkg:sv <0x30086670>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x347efa49>
+			streams:  41, words: 98322
+		worklib.uvm_pkg:sv <0x350eabea>
+			streams:  43, words: 105679
+		worklib.uvm_pkg:sv <0x3879a056>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x39968901>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x39af1f6a>
+			streams:  41, words: 100280
+		worklib.uvm_pkg:sv <0x3d6c365f>
+			streams:  37, words: 84232
+		worklib.uvm_pkg:sv <0x3dad18f4>
+			streams:  25, words: 30115
+		worklib.uvm_pkg:sv <0x3eca644b>
+			streams:  31, words: 58102
+		worklib.uvm_pkg:sv <0x414e5c92>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x448a2909>
+			streams:  31, words: 59074
+		worklib.uvm_pkg:sv <0x46fbcc82>
+			streams:  31, words: 57377
+		worklib.uvm_pkg:sv <0x4ddeb645>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x4f734c2e>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x537a68d2>
+			streams:  93, words: 185942
+		worklib.uvm_pkg:sv <0x57113f00>
+			streams:  25, words: 55959
+		worklib.uvm_pkg:sv <0x5ea25074>
+			streams:  37, words: 87016
+		worklib.uvm_pkg:sv <0x5eacc5e4>
+			streams:  33, words: 76851
+		worklib.uvm_pkg:sv <0x5eafac2e>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x64f15828>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x6906da8d>
+			streams:  82, words: 119687
+		worklib.uvm_pkg:sv <0x6bc8e5ea>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x6bff242c>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x6d6c84d2>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x6d76ca60>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x6ee91230>
+			streams:  33, words: 79857
+		worklib.uvm_pkg:sv <0x719ae072>
+			streams:  31, words: 60342
+		worklib.uvm_pkg:sv <0x73cc416d>
+			streams:  29, words: 51314
+		worklib.uvm_pkg:sv <0x7622d568>
+			streams:  31, words: 62119
+		worklib.uvm_pkg:sv <0x77f3a172>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x7a4fa4f6>
+			streams:  29, words: 51343
+		worklib.uvm_pkg:sv <0x7a588992>
+			streams:  33, words: 80789
+		worklib.uvm_pkg:sv <0x7b40d763>
+			streams:  25, words: 39216
+		worklib.uvm_pkg:sv <0x7ec64e4f>
+			streams:  25, words: 39216
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                      76      21
+		Interfaces:                    2       1
+		Verilog packages:             10      10
+		Registers:                 18259   11803
+		Scalar wires:                516       -
+		Vectored wires:              251       -
+		Named events:                  4      12
+		Always blocks:               167     120
+		Initial blocks:              515     253
+		Parallel blocks:             113     114
+		Cont. assignments:           178      84
+		Pseudo assignments:          343     185
+		Timing checks:                 6       -
+		Assertions:                   40      40
+		Covergroup Instances:          0       7
+		Compilation units:             1       1
+		SV Class declarations:       267     380
+		SV Class specializations:    543     543
+		Simulation timescale:        1ps
+	Writing initial simulation snapshot: worklib.tff:sv
+SVSEED set randomly from command line: 1198483224
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+-------------------------------------
+Relinquished control to SimVision...
+ncsim> 
+ncsim> source /tools/cadence/IUS15.2.082/tools/inca/files/ncsimrc
+ncsim> source /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+ncsim> # Restoring simulation environment...
+ncsim> input -quiet .reinvoke.sim
+ncsim> file delete .reinvoke.sim
+ncsim> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (15.20-s086)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(11) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_base_test is created...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(310) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_reset_test is created...
+UVM_INFO @ 0: reporter [RNTST] Running test APB_I2C_master_reset_test...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(16) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_base_test build phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_environment.sv(17) @ 0: uvm_test_top.env [APB_I2C_master_environment] APB_I2C_master_environment is created...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(24) @ 0: uvm_test_top [uvm_test_top] test_itter = 1
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(25) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_base_test build phase is ended...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(315) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_reset_test build phase is started...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(316) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_reset_test build phase is ended...
+UVM_INFO ../tb/env//APB_I2C_master_environment.sv(22) @ 0: uvm_test_top.env [APB_I2C_master_environment] APB_I2C_master_environment build phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(18) @ 0: uvm_test_top.env.scb [APB_I2C_master_scoreboard] APB_I2C_master_scoreboard is created...
+UVM_INFO ../tb/env//APB_I2C_master_predictor.sv(6) @ 0: uvm_test_top.env.pdtr [APB_I2C_master_predictor] APB_I2C_master_predictor is created...
+UVM_INFO ../tb/agents/I2C_agent//I2C_agent.sv(13) @ 0: uvm_test_top.env.I2C_agnt [I2C_agent] I2C_agent is created...
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(15) @ 0: uvm_test_top.env.APB_agnt [apb_agent] apb_agent is created..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(15) @ 0: uvm_test_top.env.APB_agnt_a [apb_agent] apb_agent is created..
+UVM_INFO ../tb/env//APB_I2C_master_environment.sv(42) @ 0: uvm_test_top.env [APB_I2C_master_environment] APB_I2C_master_environment build phase is ended...
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(20) @ 0: uvm_test_top.env.APB_agnt [apb_agent] apb_agent build phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(6) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [apb_sequencer] apb_sequencer is created..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(9) @ 0: uvm_test_top.env.APB_agnt.apb_drv [apb_driver] apb_driver is created..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(16) @ 0: uvm_test_top.env.APB_agnt.apb_mntr [apb_monitor] apb_monitor is created..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(29) @ 0: uvm_test_top.env.APB_agnt [apb_agent] apb_agent build phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_coverage.sv(176) @ 0: uvm_test_top.env.APB_agnt.apb_cov [apb_coverage] apb_coverage is created..
+UVM_INFO ../tb/agents/APB_agent//apb_coverage.sv(188) @ 0: uvm_test_top.env.APB_agnt.apb_cov [apb_coverage] apb_coverage build phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_coverage.sv(189) @ 0: uvm_test_top.env.APB_agnt.apb_cov [apb_coverage] apb_coverage build phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(14) @ 0: uvm_test_top.env.APB_agnt.apb_drv [apb_driver] apb_driver build phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(15) @ 0: uvm_test_top.env.APB_agnt.apb_drv [apb_driver] apb_driver build phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(21) @ 0: uvm_test_top.env.APB_agnt.apb_mntr [apb_monitor] apb_monitor build phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(25) @ 0: uvm_test_top.env.APB_agnt.apb_mntr [apb_monitor] apb_monitor build phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(11) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [apb_sequencer] apb_sequencer build phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(12) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [apb_sequencer] apb_sequencer build phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(20) @ 0: uvm_test_top.env.APB_agnt_a [apb_agent] apb_agent build phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(6) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [apb_sequencer] apb_sequencer is created..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(9) @ 0: uvm_test_top.env.APB_agnt_a.apb_drv [apb_driver] apb_driver is created..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(16) @ 0: uvm_test_top.env.APB_agnt_a.apb_mntr [apb_monitor] apb_monitor is created..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(29) @ 0: uvm_test_top.env.APB_agnt_a [apb_agent] apb_agent build phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(14) @ 0: uvm_test_top.env.APB_agnt_a.apb_drv [apb_driver] apb_driver build phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(15) @ 0: uvm_test_top.env.APB_agnt_a.apb_drv [apb_driver] apb_driver build phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(21) @ 0: uvm_test_top.env.APB_agnt_a.apb_mntr [apb_monitor] apb_monitor build phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(25) @ 0: uvm_test_top.env.APB_agnt_a.apb_mntr [apb_monitor] apb_monitor build phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(11) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [apb_sequencer] apb_sequencer build phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(12) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [apb_sequencer] apb_sequencer build phase ended..
+UVM_INFO ../tb/agents/I2C_agent//I2C_agent.sv(18) @ 0: uvm_test_top.env.I2C_agnt [I2C_agent] I2C_agent build phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_sequencer.sv(6) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [I2C_sequencer] I2C_sequencer is created...
+UVM_INFO ../tb/agents/I2C_agent//I2C_driver.sv(15) @ 0: uvm_test_top.env.I2C_agnt.drv [I2C_driver] I2C_driver is created...
+UVM_INFO ../tb/agents/I2C_agent//I2C_monitor.sv(23) @ 0: uvm_test_top.env.I2C_agnt.mntr [I2C_monitor] I2C_monitor is created...
+UVM_INFO ../tb/agents/I2C_agent//I2C_agent.sv(26) @ 0: uvm_test_top.env.I2C_agnt [I2C_agent] I2C_agent build phase is ended...
+UVM_INFO ../tb/agents/I2C_agent//I2C_sequencer.sv(11) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [I2C_sequencer] I2C_sequencer build phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_sequencer.sv(12) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [I2C_sequencer] I2C_sequencer build phase is ended...
+UVM_INFO ../tb/agents/I2C_agent//I2C_driver.sv(20) @ 0: uvm_test_top.env.I2C_agnt.drv [I2C_driver] I2C_driver build phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_driver.sv(21) @ 0: uvm_test_top.env.I2C_agnt.drv [I2C_driver] I2C_driver build phase is ended...
+UVM_INFO ../tb/agents/I2C_agent//I2C_monitor.sv(28) @ 0: uvm_test_top.env.I2C_agnt.mntr [I2C_monitor] I2C_monitor build phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_monitor.sv(30) @ 0: uvm_test_top.env.I2C_agnt.mntr [I2C_monitor] I2C_monitor build phase is ended...
+UVM_INFO ../tb/env//APB_I2C_master_predictor.sv(11) @ 0: uvm_test_top.env.pdtr [APB_I2C_master_predictor] APB_I2C_master_predictor build phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_predictor.sv(12) @ 0: uvm_test_top.env.pdtr [APB_I2C_master_predictor] APB_I2C_master_predictor build phase is ended...
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(23) @ 0: uvm_test_top.env.scb [APB_I2C_master_scoreboard] APB_I2C_master_scoreboard build phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(28) @ 0: uvm_test_top.env.scb [APB_I2C_master_scoreboard] APB_I2C_master_scoreboard build phase is ended...
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(20) @ 0: uvm_test_top.env.APB_agnt.apb_drv [apb_driver] apb_driver connect phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(21) @ 0: uvm_test_top.env.APB_agnt.apb_drv [apb_driver] apb_driver connect phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(30) @ 0: uvm_test_top.env.APB_agnt.apb_mntr [apb_monitor] apb_monitor connect phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(31) @ 0: uvm_test_top.env.APB_agnt.apb_mntr [apb_monitor] apb_monitor connect phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(17) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [apb_sequencer] apb_sequencer connect phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(18) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [apb_sequencer] apb_sequencer connect phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(36) @ 0: uvm_test_top.env.APB_agnt [apb_agent] apb_agent connect phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(42) @ 0: uvm_test_top.env.APB_agnt [apb_agent] apb_agent connect phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(20) @ 0: uvm_test_top.env.APB_agnt_a.apb_drv [apb_driver] apb_driver connect phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(21) @ 0: uvm_test_top.env.APB_agnt_a.apb_drv [apb_driver] apb_driver connect phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(30) @ 0: uvm_test_top.env.APB_agnt_a.apb_mntr [apb_monitor] apb_monitor connect phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(31) @ 0: uvm_test_top.env.APB_agnt_a.apb_mntr [apb_monitor] apb_monitor connect phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(17) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [apb_sequencer] apb_sequencer connect phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(18) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [apb_sequencer] apb_sequencer connect phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(36) @ 0: uvm_test_top.env.APB_agnt_a [apb_agent] apb_agent connect phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(42) @ 0: uvm_test_top.env.APB_agnt_a [apb_agent] apb_agent connect phase ended..
+UVM_INFO ../tb/agents/I2C_agent//I2C_sequencer.sv(17) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [I2C_sequencer] I2C_sequencer connect phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_sequencer.sv(18) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [I2C_sequencer] I2C_sequencer connect phase is ended...
+UVM_INFO ../tb/agents/I2C_agent//I2C_driver.sv(26) @ 0: uvm_test_top.env.I2C_agnt.drv [I2C_driver] I2C_driver connect phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_driver.sv(27) @ 0: uvm_test_top.env.I2C_agnt.drv [I2C_driver] I2C_driver connect phase is ended...
+UVM_INFO ../tb/agents/I2C_agent//I2C_monitor.sv(35) @ 0: uvm_test_top.env.I2C_agnt.mntr [I2C_monitor] I2C_monitor connect phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_monitor.sv(36) @ 0: uvm_test_top.env.I2C_agnt.mntr [I2C_monitor] I2C_monitor connect phase is ended...
+UVM_INFO ../tb/agents/I2C_agent//I2C_agent.sv(31) @ 0: uvm_test_top.env.I2C_agnt [I2C_agent] I2C_agent connect phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_agent.sv(38) @ 0: uvm_test_top.env.I2C_agnt [I2C_agent] I2C_agent connect phase is ended...
+UVM_INFO ../tb/env//APB_I2C_master_predictor.sv(17) @ 0: uvm_test_top.env.pdtr [APB_I2C_master_predictor] APB_I2C_master_predictor connect phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_predictor.sv(18) @ 0: uvm_test_top.env.pdtr [APB_I2C_master_predictor] APB_I2C_master_predictor connect phase is ended...
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(33) @ 0: uvm_test_top.env.scb [APB_I2C_master_scoreboard] APB_I2C_master_scoreboard connect phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(34) @ 0: uvm_test_top.env.scb [APB_I2C_master_scoreboard] APB_I2C_master_scoreboard connect phase is ended...
+UVM_INFO ../tb/env//APB_I2C_master_environment.sv(47) @ 0: uvm_test_top.env [APB_I2C_master_environment] APB_I2C_master_environment connect phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_environment.sv(56) @ 0: uvm_test_top.env [APB_I2C_master_environment] APB_I2C_master_environment connect phase is ended...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(30) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_base_test connect phase is started...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(31) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_base_test connect phase is ended...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(321) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_reset_test connect phase is started...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(322) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_reset_test connect phase is ended...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(36) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_base_test run phase is started...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(37) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_base_test run phase is ended...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(327) @ 0: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_reset_test run phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_environment.sv(61) @ 0: uvm_test_top.env [APB_I2C_master_environment] APB_I2C_master_environment run phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_environment.sv(62) @ 0: uvm_test_top.env [APB_I2C_master_environment] APB_I2C_master_environment run phase is ended...
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(39) @ 0: uvm_test_top.env.scb [APB_I2C_master_scoreboard] APB_I2C_master_scoreboard run phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_predictor.sv(23) @ 0: uvm_test_top.env.pdtr [APB_I2C_master_predictor] APB_I2C_master_predictor run phase is started...
+UVM_INFO ../tb/env//APB_I2C_master_predictor.sv(24) @ 0: uvm_test_top.env.pdtr [APB_I2C_master_predictor] APB_I2C_master_predictor run phase is ended...
+UVM_INFO ../tb/agents/I2C_agent//I2C_agent.sv(43) @ 0: uvm_test_top.env.I2C_agnt [I2C_agent] I2C_agent run phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_agent.sv(44) @ 0: uvm_test_top.env.I2C_agnt [I2C_agent] I2C_agent run phase is ended...
+UVM_INFO ../tb/agents/I2C_agent//I2C_monitor.sv(41) @ 0: uvm_test_top.env.I2C_agnt.mntr [I2C_monitor] I2C_monitor run phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_driver.sv(32) @ 0: uvm_test_top.env.I2C_agnt.drv [I2C_driver] I2C_driver run phase is started...
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'run'
+UVM_INFO ../tb/agents/I2C_agent//I2C_sequencer.sv(23) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [I2C_sequencer] I2C_sequencer run phase is started...
+UVM_INFO ../tb/agents/I2C_agent//I2C_sequencer.sv(24) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [I2C_sequencer] I2C_sequencer run phase is ended...
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(47) @ 0: uvm_test_top.env.APB_agnt_a [apb_agent] apb_agent run phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(48) @ 0: uvm_test_top.env.APB_agnt_a [apb_agent] apb_agent run phase ended..
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'run'
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(23) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [apb_sequencer] apb_sequencer run phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(24) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [apb_sequencer] apb_sequencer run phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(36) @ 0: uvm_test_top.env.APB_agnt_a.apb_mntr [apb_monitor] apb_monitor run phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(26) @ 0: uvm_test_top.env.APB_agnt_a.apb_drv [apb_driver] apb_driver run phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(47) @ 0: uvm_test_top.env.APB_agnt [apb_agent] apb_agent run phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_agent.sv(48) @ 0: uvm_test_top.env.APB_agnt [apb_agent] apb_agent run phase ended..
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'run'
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(23) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [apb_sequencer] apb_sequencer run phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_sequencer.sv(24) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [apb_sequencer] apb_sequencer run phase ended..
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(36) @ 0: uvm_test_top.env.APB_agnt.apb_mntr [apb_monitor] apb_monitor run phase started..
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(26) @ 0: uvm_test_top.env.APB_agnt.apb_drv [apb_driver] apb_driver run phase started..
+UVM_INFO ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv(182) @ 0: reporter@@APB_I2C_master_reset_vs [APB_I2C_master_reset_virtual_sequence]  APB_I2C_master_reset_virtual_sequence body task called
+UVM_INFO ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv(42) @ 0: reporter@@APB_I2C_master_reset_vs [APB_I2C_master_reset_virtual_sequence]  APB RESET TASK CALLED
+UVM_INFO ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv(42) @ 0: reporter@@APB_I2C_master_reset_vs [APB_I2C_master_reset_virtual_sequence]  APB RESET TASK CALLED
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'pre_reset'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'pre_reset'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'pre_reset'
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(29) @ 0: uvm_test_top.env.APB_agnt_a.apb_drv [apb_driver]  RECEIVED ITEM
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(48) @ 0: uvm_test_top.env.APB_agnt_a.apb_drv [apb_driver]  APB RESET TASK CALLED
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(29) @ 0: uvm_test_top.env.APB_agnt.apb_drv [apb_driver]  RECEIVED ITEM
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(48) @ 0: uvm_test_top.env.APB_agnt.apb_drv [apb_driver]  APB RESET TASK CALLED
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.pre_reset' (id=1933) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'reset'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'reset'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'reset'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.reset' (id=1992) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'post_reset'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'post_reset'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'post_reset'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.post_reset' (id=2051) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'pre_configure'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'pre_configure'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'pre_configure'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.pre_configure' (id=2110) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'configure'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'configure'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'configure'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.configure' (id=2169) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'post_configure'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'post_configure'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'post_configure'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.post_configure' (id=2228) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'pre_main'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'pre_main'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'pre_main'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.pre_main' (id=2287) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'main'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'main'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'main'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.main' (id=2346) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'post_main'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'post_main'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'post_main'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.post_main' (id=2405) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'pre_shutdown'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'pre_shutdown'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'pre_shutdown'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.pre_shutdown' (id=2464) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'shutdown'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'shutdown'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'shutdown'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 0: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.shutdown' (id=2523) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.I2C_agnt.I2C_sqncr [PHASESEQ] No default phase sequence for phase 'post_shutdown'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt_a.apb_sqncr [PHASESEQ] No default phase sequence for phase 'post_shutdown'
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/seq/uvm_sequencer_base.svh(1385) @ 0: uvm_test_top.env.APB_agnt.apb_sqncr [PHASESEQ] No default phase sequence for phase 'post_shutdown'
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(52) @ 79000: uvm_test_top.env.APB_agnt_a.apb_mntr [apb_monitor]  Got reset and reseting the reg model 
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(52) @ 79000: uvm_test_top.env.APB_agnt.apb_mntr [apb_monitor]  Got reset and reseting the reg model 
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(52) @ 237000: uvm_test_top.env.APB_agnt_a.apb_mntr [apb_monitor]  Got reset and reseting the reg model 
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(52) @ 237000: uvm_test_top.env.APB_agnt.apb_mntr [apb_monitor]  Got reset and reseting the reg model 
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg_map.svh(1869) @ 316000: reporter [uvm_reg_map] Writing 'h6a at 'h10 via map "reg_blk.reg_map"...
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(29) @ 316000: uvm_test_top.env.APB_agnt.apb_drv [apb_driver]  RECEIVED ITEM
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(62) @ 316000: uvm_test_top.env.APB_agnt.apb_drv [apb_driver]  APB WRITE TASK CALLED
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(65) @ 553000: uvm_test_top.env.APB_agnt.apb_mntr [apb_monitor] Sending item to scoreboard 
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg_map.svh(1916) @ 632000: reporter [uvm_reg_map] Wrote 'h6a at 'h10 via map "reg_blk.reg_map": UVM_IS_OK...
+UVM_INFO @ 632000: reporter [RegModel] Wrote register via map reg_blk.reg_map: reg_blk.TWBR=0x6a
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg_map.svh(1996) @ 632000: reporter [uvm_reg_map] Reading address 'h10 via map "reg_blk.reg_map"...
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(29) @ 632000: uvm_test_top.env.APB_agnt.apb_drv [apb_driver]  RECEIVED ITEM
+UVM_INFO ../tb/agents/APB_agent//apb_driver.sv(81) @ 632000: uvm_test_top.env.APB_agnt.apb_drv [apb_driver]  APB READ TASK CALLED
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(67) @ 869000: uvm_test_top.env.scb [APB_I2C_master_scoreboard]  PADDR = 10
+UVM_INFO ../tb/env//environment_config.sv(17) @ 869000: reporter [environment_config] PASSED:: EXPECTED PRDATA = 6a, CAPTURED PRDATA = 6a
+UVM_INFO ../tb/agents/APB_agent//apb_monitor.sv(65) @ 869000: uvm_test_top.env.APB_agnt.apb_mntr [apb_monitor] Sending item to scoreboard 
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg_map.svh(2044) @ 948000: reporter [uvm_reg_map] Read 'h6a at 'h10 via map "reg_blk.reg_map": UVM_IS_OK...
+UVM_ERROR /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg.svh(2892) @ 948000: reporter [RegModel] Register "reg_blk.TWBR" value read from DUT (0x000000000000006a) does not match mirrored value (0x0000000000000064)
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/reg/uvm_reg.svh(2911) @ 948000: reporter [RegModel] Field TWBR_ (reg_blk.TWBR[7:0]) mismatch read=8'h6a mirrored=8'h64 
+UVM_INFO @ 948000: reporter [RegModel] Read  register via map reg_blk.reg_map: reg_blk.TWBR=6a
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(331) @ 948000: uvm_test_top [APB_I2C_master_reset_test] APB_I2C_master_reset_test run phase is ended...
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1245) @ 948000: reporter [TEST_DONE] All end-of-test objections have been dropped. Calling stop tasks
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_objection.svh(1268) @ 948000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1211) @ 948000: reporter [PH/TRC/EXE/ALLDROP] Phase 'common.run' (id=1542) PHASE EXIT ALL_DROPPED
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 948000: reporter [PH_READY_TO_END] Phase 'common.run' (id=1542) PHASE READY TO END
+UVM_INFO /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_phase.svh(1227) @ 948000: reporter [PH_READY_TO_END] Phase 'uvm.uvm_sched.post_shutdown' (id=2582) PHASE READY TO END
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(103) @ 948000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] --------------------------------------
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(104) @ 948000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] ----             FAILED           ----
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(105) @ 948000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] --------------------------------------
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(107) @ 948000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] Total Test        = 1
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(108) @ 948000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] Total Test Passed = 1
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(109) @ 948000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] Total Test Failed = 0
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  204
+UVM_WARNING :    0
+UVM_ERROR :    1
+UVM_FATAL :    0
+** Report counts by id
+[APB_I2C_master_environment]     7
+[APB_I2C_master_predictor]     7
+[APB_I2C_master_reset_test]    14
+[APB_I2C_master_reset_virtual_sequence]     3
+[APB_I2C_master_scoreboard]    13
+[I2C_agent]     7
+[I2C_driver]     6
+[I2C_monitor]     6
+[I2C_sequencer]     7
+[PH/TRC/EXE/ALLDROP]     1
+[PHASESEQ]    39
+[PH_READY_TO_END]    13
+[RNTST]     1
+[RegModel]     4
+[TEST_DONE]     2
+[apb_agent]    14
+[apb_coverage]     3
+[apb_driver]    20
+[apb_monitor]    18
+[apb_sequencer]    14
+[environment_config]     1
+[uvm_reg_map]     4
+[uvm_test_top]     1
+Simulation complete via $finish(1) at time 948 NS + 56
+/tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+ncsim> ^C
+ncsim> exit
+TOOL:	irun(64)	15.20-s086: Exiting on Feb 29, 2024 at 09:19:39 +06  (total: 00:03:59)

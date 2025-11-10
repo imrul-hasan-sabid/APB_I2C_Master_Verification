@@ -1,0 +1,65 @@
+
+# NC-Sim Command File
+# TOOL:	ncsim(64)	15.20-s086
+#
+#
+# You can restore this configuration with:
+#
+#      irun -f filelist.f -access +rwc -uvm +UVM_NO_RELNOTES -timescale 1ns/1ps +UVM_TESTNAME=APB_I2C_M_arbitration_SLA_WR_test +UVM_VERBOSITY=UVM_LOW +test_itter=1 -seed random -s -input restore.tcl
+#
+
+set tcl_prompt1 {puts -nonewline "ncsim> "}
+set tcl_prompt2 {puts -nonewline "> "}
+set vlog_format %h
+set vhdl_format %v
+set real_precision 6
+set display_unit auto
+set time_unit module
+set heap_garbage_size -200
+set heap_garbage_time 0
+set assert_report_level note
+set assert_stop_level error
+set autoscope yes
+set assert_1164_warnings yes
+set pack_assert_off {}
+set severity_pack_assert_off {note warning}
+set assert_output_stop_level failed
+set tcl_debug_level 0
+set relax_path_name 1
+set vhdl_vcdmap XX01ZX01X
+set intovf_severity_level ERROR
+set probe_screen_format 0
+set rangecnst_severity_level ERROR
+set textio_severity_level ERROR
+set vital_timing_checks_on 1
+set vlog_code_show_force 0
+set assert_count_attempts 1
+set tcl_all64 false
+set tcl_runerror_exit false
+set assert_report_incompletes 0
+set show_force 1
+set force_reset_by_reinvoke 0
+set tcl_relaxed_literal 0
+set probe_exclude_patterns {}
+set probe_packed_limit 4k
+set probe_unpacked_limit 16k
+set assert_internal_msg no
+set svseed -1334274880
+set assert_reporting_mode 0
+alias . run
+alias iprof profile
+alias quit exit
+stop -create -name Randomize -randomize
+database -open -shm -into waves.shm waves -default
+probe -create -database waves tb_top_APB_I2C_master.intf.PCLK tb_top_APB_I2C_master.intf.PRESETN tb_top_APB_I2C_master.intf.PSEL tb_top_APB_I2C_master.intf.PENABLE tb_top_APB_I2C_master.intf.PWRITE tb_top_APB_I2C_master.intf.PADDR tb_top_APB_I2C_master.intf.PWDATA tb_top_APB_I2C_master.intf.PRDATA tb_top_APB_I2C_master.intf.PREADY tb_top_APB_I2C_master.intf.interrupt_pad_o tb_top_APB_I2C_master.intf.SCL tb_top_APB_I2C_master.intf.scl_pad_o tb_top_APB_I2C_master.intf.scl_pad_oe tb_top_APB_I2C_master.intf.slv_scl_pad_o tb_top_APB_I2C_master.intf.slv_scl_pad_oe tb_top_APB_I2C_master.intf.SDA tb_top_APB_I2C_master.intf.sda_pad_o tb_top_APB_I2C_master.intf.sda_pad_oe tb_top_APB_I2C_master.intf.slv_sda_pad_o tb_top_APB_I2C_master.intf.slv_sda_pad_oe tb_top_APB_I2C_master.intf.TM tb_top_APB_I2C_master.intf.SE
+probe -create -database waves tb_top_APB_I2C_master.DUT.mst_ctrl_fsm_sda_scl_driver_sel
+probe -create -database waves tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.pstate
+probe -create -database waves tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.ack_flag tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.arb_lost tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.comp_match tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.comp_match_bit_cntr tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_ack_flag_clr tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_ack_flag_set tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_clr_bit_cntr tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_clr_twsto tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_en tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_gen_sta tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_gen_sto tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_repeat_flag_clr tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_repeat_flag_set tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_rw_flag_clr tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_rw_flag_set tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_scl_en tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_scl_pad_oe tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_sda_ack_bit tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_sda_pad_oe tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_sda_scl_driver_sel tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_start_flag_clr tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_start_flag_set tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_twdr_mode tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_twint_hardware_d tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_twsr_d_sel tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.mst_ctrl_fsm_twsr_wr_en tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.neg_edge_det tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.nstate tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.pclk tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.pos_edge_det tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.presetn tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.repeat_flag tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.rw_flag tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.scl_pad_i tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.sda_pad_i tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.start_flag tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.twea tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.twen tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.twint tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.twsta tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.twsto tb_top_APB_I2C_master.DUT.u_mst_ctrl_fsm.usr_twdr_mode
+probe -create -database waves tb_top_APB_I2C_master.intf.PCLK tb_top_APB_I2C_master.intf.PRESETN tb_top_APB_I2C_master.intf.PSEL tb_top_APB_I2C_master.intf.PENABLE tb_top_APB_I2C_master.intf.PWRITE tb_top_APB_I2C_master.intf.PADDR tb_top_APB_I2C_master.intf.PWDATA tb_top_APB_I2C_master.intf.PRDATA tb_top_APB_I2C_master.intf.PREADY tb_top_APB_I2C_master.intf.interrupt_pad_o tb_top_APB_I2C_master.intf.SCL tb_top_APB_I2C_master.intf.SDA tb_top_APB_I2C_master.intf.scl_pad_o tb_top_APB_I2C_master.intf.scl_pad_oe tb_top_APB_I2C_master.intf.slv_scl_pad_o tb_top_APB_I2C_master.intf.slv_scl_pad_oe tb_top_APB_I2C_master.intf.sda_pad_o tb_top_APB_I2C_master.intf.sda_pad_oe tb_top_APB_I2C_master.intf.slv_sda_pad_o tb_top_APB_I2C_master.intf.slv_sda_pad_oe tb_top_APB_I2C_master.intf.TM tb_top_APB_I2C_master.intf.SE
+probe -create -database waves tb_top_APB_I2C_master.DUT.repeat_flag
+probe -create -database waves tb_top_APB_I2C_master.intf_a.scl_pad_o tb_top_APB_I2C_master.intf_a.scl_pad_oe tb_top_APB_I2C_master.intf_a.sda_pad_o tb_top_APB_I2C_master.intf_a.sda_pad_oe
+probe -create -database waves tb_top_APB_I2C_master.intf_a.PCLK tb_top_APB_I2C_master.intf_a.PRESETN tb_top_APB_I2C_master.intf_a.PSEL tb_top_APB_I2C_master.intf_a.PENABLE tb_top_APB_I2C_master.intf_a.PWRITE tb_top_APB_I2C_master.intf_a.PADDR tb_top_APB_I2C_master.intf_a.PWDATA tb_top_APB_I2C_master.intf_a.PRDATA tb_top_APB_I2C_master.intf_a.PREADY
+probe -create -database waves tb_top_APB_I2C_master.intf_a.interrupt_pad_o
+probe -create -database waves tb_top_APB_I2C_master.assert_APB_I2C_M_TWSTA tb_top_APB_I2C_master.assert_APB_I2C_M_TWSTO tb_top_APB_I2C_master.assert_APB_I2C_M_interrupt_pad_o_deassert tb_top_APB_I2C_master.assert_APB_I2C_M_interrupt_pad_o_assert_after_S tb_top_APB_I2C_master.assert_APB_I2C_M_interrupt_pad_o_assert_EOT tb_top_APB_I2C_master.assert_APB_I2C_M_TWEA tb_top_APB_I2C_master.assert_APB_I2C_M_interrupt_pad_o_low_stable_TWSTA tb_top_APB_I2C_master.assert_APB_I2C_M_interrupt_pad_o_low_stable_TWSTO tb_top_APB_I2C_master.assert_APB_I2C_M_interrupt_pad_o_low_stable_till_EOT
+
+simvision -input restore.tcl.svcf

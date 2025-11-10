@@ -1,0 +1,8 @@
+s1(29Feb2024:09:01:22):  irun -f filelist.f -gui -access +rwc -uvm +UVM_NO_RELNOTES -timescale 1ns/1ps +UVM_TESTNAME=APB_I2C_master_reset_test +UVM_VERBOSITY=UVM_LOW +test_itter=1 -define assert_off -seed random 
+s2(29Feb2024:09:02:32):  irun -f filelist.f -gui -access +rwc -uvm +UVM_NO_RELNOTES -timescale 1ns/1ps +UVM_TESTNAME=APB_I2C_master_reset_test +UVM_VERBOSITY=UVM_DEBUG +test_itter=1 -define assert_off -seed random -s  
+s3(29Feb2024:09:04:07):  irun -f filelist.f -gui -access +rwc -uvm +UVM_NO_RELNOTES -timescale 1ns/1ps +UVM_TESTNAME=APB_I2C_master_reset_test +UVM_VERBOSITY=UVM_DEBUG +test_itter=1 -define assert_off -seed random -s 
+s4(29Feb2024:09:06:10):  irun -f filelist.f -gui -access +rwc -uvm +UVM_NO_RELNOTES -timescale 1ns/1ps +UVM_TESTNAME=APB_I2C_master_reset_test +UVM_VERBOSITY=UVM_DEBUG +test_itter=1 -define assert_off -seed random -s 
+s5(29Feb2024:09:07:13):  irun -f filelist.f -gui -access +rwc -uvm +UVM_NO_RELNOTES -timescale 1ns/1ps +UVM_TESTNAME=APB_I2C_master_reset_test +UVM_VERBOSITY=UVM_DEBUG +test_itter=1 -define assert_off -seed random -s 
+s6(29Feb2024:09:10:01):  irun -f filelist.f -gui -access +rwc -uvm +UVM_NO_RELNOTES -timescale 1ns/1ps +UVM_TESTNAME=APB_I2C_master_reset_test +UVM_VERBOSITY=UVM_DEBUG +test_itter=1 -define assert_off -seed random -s 
+s7(29Feb2024:09:15:04):  irun -f filelist.f -gui -access +rwc -uvm +UVM_NO_RELNOTES -timescale 1ns/1ps +UVM_TESTNAME=APB_I2C_master_reset_test +UVM_VERBOSITY=UVM_DEBUG +test_itter=1 -define assert_off -seed random -s 
+s8(29Feb2024:09:15:40):  irun -f filelist.f -gui -access +rwc -uvm +UVM_NO_RELNOTES -timescale 1ns/1ps +UVM_TESTNAME=APB_I2C_master_reset_test +UVM_VERBOSITY=UVM_DEBUG +test_itter=1 -define assert_off -seed random -s 

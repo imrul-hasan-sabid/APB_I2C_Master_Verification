@@ -1,0 +1,62 @@
+instance tb_top_APB_I2C_master.intf_a.*
+instance tb_top_APB_I2C_master.DUT_a.*
+instance tb_top_APB_I2C_master.intf.TM
+instance tb_top_APB_I2C_master.intf.SE
+instance tb_top_APB_I2C_master.notifier
+instance jkff.*
+instance tff.*
+instance full_adder.*
+instance priority_encoder.*
+instance mux81.*
+-ere module apb_i2c_man_sub_intf\.twsr_load_status\[([0-2])\]
+-ere module apb_i2c_man_sub_intf\.apb_i2c_man_sub_intf_flop_en
+-ere module apb_i2c_man_sub_intf.prdata\[(([1-2][0-9])|([8-9])|(3[0-1]))\]
+-ere module apb_i2c_man_sub_intf.rdata\[(([1-2][0-9])|([8-9])|(3[0-1]))\]
+-ere module apb_i2c_man_sub_intf.addr\[(([1-2][0-9])|([5-9])|(3[0-1])|([0-1]))\]
+-ere module apb_i2c_man_sub_intf.twcr_d\[(([1-2][0-9])|([8-9])|(3[0-1])|(1))\]
+-ere module apb_i2c_man_sub_intf.twcr_q\[(([1-2][0-9])|([8-9])|(3[0-1])|(1))\]
+-ere module apb_i2c_man_sub_intf.twar_d\[(([1-2][0-9])|([8-9])|(3[0-1]))\]
+-ere module apb_i2c_man_sub_intf.twar_q\[(([1-2][0-9])|([8-9])|(3[0-1]))\]
+-ere module apb_i2c_man_sub_intf.twsr_d\[(([1-2][0-9])|([8-9])|(3[0-1])|(2))\]
+-ere module apb_i2c_man_sub_intf.twsr_q\[(([1-2][0-9])|([8-9])|(3[0-1])|(2))\]
+-ere module apb_i2c_man_sub_intf.twsr_load_prescaler\[(([1-2][0-9])|([8-9])|(3[0-1])|(2))\]
+-ere module apb_i2c_man_sub_intf.twbr_d\[(([1-2][0-9])|([8-9])|(3[0-1]))\]
+-ere module apb_i2c_man_sub_intf.twbr_q\[(([1-2][0-9])|([8-9])|(3[0-1]))\]
+-ere module apb_sub.prdata\[(([1-2][0-9])|([8-9])|(3[0-1]))\]
+-ere module apb_sub.rdata\[(([1-2][0-9])|([8-9])|(3[0-1]))\]
+-ere module apb_sub.addr\[(([1-2][0-9])|([5-9])|(3[0-1])|([0-1]))\]
+-ere module apb_sub.apb_sub_flop_en
+-ere module dff.en
+-ere module mst_ctrl_fsm.mst_ctrl_fsm_en
+-ere module mst_ctrl_fsm.mst_ctrl_fsm_twsr_d_sel\[(4)\]
+-ere module mst_ctrl_fsm.mst_ctrl_fsm_twdr_mode\[(2)\]
+-ere module mst_ctrl_fsm.pstate\[(4)\]
+-ere module mst_ctrl_fsm.nstate\[(4)\]
+-ere module counter_nbit.up_down
+-ere module counter_nbit.preload
+-ere module counter_nbit.load_value\[([0-2])\]
+-ere module comparator_nbit.a\[([0-2])\]
+-ere module comparator_nbit.l
+-ere module sta_sto_gen.sda_gen
+-ere module scl_gen.scl_gen_flop_en
+-ere module scl_gen.m1\[(0)\]
+-ere module scl_gen.m2\[((0)|(15))\]
+-ere module scl_gen.h1\[(0)\]
+-ere module scl_gen.h2\[((0)|(15))\]
+-ere module scl_gen.cntr_val\[(1[4-5])\]
+-ere module scl_gen.cntr_val_start\[(1[5-6])\]
+-ere module barrel_shifter_nbit.shift_by\[(0)\]
+-ere module barrel_shifter_nbit.shift_dir
+-ere module barrel_shifter_nbit.shifter_out\[(0)\]
+-ere module half_adder.a\[([0-2])\]
+-ere module half_adder.b\[(0)\]
+-ere module half_adder.sum\[(0)\]
+-ere module half_adder.carry_out
+-ere module mux16_1\.i[0-9]\[([0-7])\]
+-ere module mux16_1\.i10\[([0-7])\]
+-ere module mux16_1\.i11\[([0-7])\]
+-ere module mux16_1\.i12\[([0-7])\]
+-ere module mux16_1\.i13\[([0-7])\]
+-ere module mux16_1\.i14\[([0-7])\]
+-ere module mux16_1\.i15\[([0-7])\]
+-ere module mux16_1.out\[([0-2])\]

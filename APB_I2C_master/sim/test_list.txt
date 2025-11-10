@@ -1,0 +1,1 @@
+APB_I2C_MT_write_transfer_with_P_follow_S_test APB_I2C_MR_read_transfer_with_P_follow_S_test

@@ -1,0 +1,733 @@
+              Log File for ICCR 
+              TOOL:	iccr(64)	15.20-s086
+
+############################################################################
+iccr: *W,ICCREL: ICCR, the coverage analysis tool, is now end of support, and no more bug fixes will be provided. Starting 16.1 Incisive release and onwards, ICCR will be removed from all future Incisive releases. Start using the Incisive Metrics Center (IMC) tool provided in the Incisive release stream for coverage analysis.
+iccr> set merge -union
+
+############################################################################
+iccr> merge cov_work/scope/* -output merge_dir
+iccr: *W,DUTMDM: The DUT module(s) to be merged is(are) not specified. So top module in primary test is assumed as the DUT module to be merged.
+  
+Reading primary database: cov_work/scope/merge_dir
+	Modules considered for merge: uvm_pkg APB_I2C_master_ral_model apb_agent_pkg I2C_agent_pkg env_pkg seqlib_pkg test_pkg $unit tff jkff full_adder priority_encoder mux81 tb_top_APB_I2C_master 
+ Merging 19 secondary tests/databases into primary database...
+cov_work/scope/APB_I2C_MT_cov_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_register_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_M_randomize_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_master_reset_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_M_write_collision_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_M_synchronization_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_M_clock_stretching_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_MR_read_transfer_with_S_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_MT_write_transfer_with_S_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_M_arbitration_SLA_WR_win_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_M_arbitration_SLA_WR_lost_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_MR_next_read_transfer_with_RS_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_MT_next_write_transfer_with_RS_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_MR_read_transfer_with_slave_NACK_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_MR_read_transfer_with_P_follow_S_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_MT_write_transfer_with_P_follow_S_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_MT_write_transfer_with_slave_NACK_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_M_arbitration_in_data_transfer_win_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+cov_work/scope/APB_I2C_M_arbitration_in_data_transfer_lost_test:
+	Instance tree: uvm_pkg to uvm_pkg 
+	  "APB_I2C_master_ral_model" not merged - Not found or not sampled in secondary test.
+	Instance tree: apb_agent_pkg to apb_agent_pkg 
+	  "I2C_agent_pkg" not merged - Not found or not sampled in secondary test.
+	  "env_pkg" not merged - Not found or not sampled in secondary test.
+	  "seqlib_pkg" not merged - Not found or not sampled in secondary test.
+	  "test_pkg" not merged - Not found or not sampled in secondary test.
+	  "$unit" not merged - Not found or not sampled in secondary test.
+	Instance tree: tff to tff 
+	Instance tree: jkff to jkff 
+	Instance tree: full_adder to full_adder 
+	Instance tree: priority_encoder to priority_encoder 
+	Instance tree: mux81 to mux81 
+	Instance tree: tb_top_APB_I2C_master to tb_top_APB_I2C_master 
+
+Writing output database: cov_work/scope/merge_dir
+Total items not merged:         114
+List of conflicts and complete list of non-merged items report only when merge is run with -message option.
+
+############################################################################
+iccr> load_test merge_dir
+Exploring 1 test directory.
+Loading test ./cov_work/scope/merge_dir
+1 coverage database loaded
+
+############################################################################
+iccr> load_icf exclude_case_1.icf
+iccr: *W,ICCREL: ICCR, the coverage analysis tool, is now end of support, and no more bug fixes will be provided. Starting 16.1 Incisive release and onwards, ICCR will be removed from all future Incisive releases. Start using the Incisive Metrics Center (IMC) tool provided in the Incisive release stream for coverage analysis.
+iccr> # This file is generated by 'iccr' on Feb 22, 2024 at 15:47:22 +06
+
+############################################################################
+iccr> # Tool: iccr(64) 15.20-s086
+
+############################################################################
+iccr> # Test: /home/Im220210/Im220210/UVM/APB_I2C_master/sim/cov_work/scope/merge_dir
+
+############################################################################
+iccr> # User: Im220210
+
+############################################################################
+iccr> # Host: madrid
+
+############################################################################
+iccr> 
+
+############################################################################
+iccr> undo_mark -module -b tff 1
+
+############################################################################
+iccr> mark -ignore -module -b tff 1
+
+############################################################################
+iccr> undo_mark -module -b tff 2
+
+############################################################################
+iccr> mark -ignore -module -b tff 2
+
+############################################################################
+iccr> undo_mark -module -b tff 3
+
+############################################################################
+iccr> mark -ignore -module -b tff 3
+
+############################################################################
+iccr> undo_mark -module -b jkff 1
+
+############################################################################
+iccr> mark -ignore -module -b jkff 1
+
+############################################################################
+iccr> undo_mark -module -b jkff 2
+
+############################################################################
+iccr> mark -ignore -module -b jkff 2
+
+############################################################################
+iccr> undo_mark -module -b jkff 3
+
+############################################################################
+iccr> mark -ignore -module -b jkff 3
+
+############################################################################
+iccr> undo_mark -module -b jkff 4
+
+############################################################################
+iccr> mark -ignore -module -b jkff 4
+
+############################################################################
+iccr> undo_mark -module -b jkff 5
+
+############################################################################
+iccr> mark -ignore -module -b jkff 5
+
+############################################################################
+iccr> undo_mark -module -b jkff 6
+
+############################################################################
+iccr> mark -ignore -module -b jkff 6
+
+############################################################################
+iccr> undo_mark -module -b jkff 7
+
+############################################################################
+iccr> mark -ignore -module -b jkff 7
+
+############################################################################
+iccr> undo_mark -module -b jkff 8
+
+############################################################################
+iccr> mark -ignore -module -b jkff 8
+
+############################################################################
+iccr> undo_mark -module -b priority_encoder 1
+
+############################################################################
+iccr> mark -ignore -module -b priority_encoder 1
+
+############################################################################
+iccr> undo_mark -module -b priority_encoder 2
+
+############################################################################
+iccr> mark -ignore -module -b priority_encoder 2
+
+############################################################################
+iccr> undo_mark -module -b priority_encoder 3
+
+############################################################################
+iccr> mark -ignore -module -b priority_encoder 3
+
+############################################################################
+iccr> undo_mark -module -b priority_encoder 4
+
+############################################################################
+iccr> mark -ignore -module -b priority_encoder 4
+
+############################################################################
+iccr> undo_mark -module -b priority_encoder 5
+
+############################################################################
+iccr> mark -ignore -module -b priority_encoder 5
+
+############################################################################
+iccr> undo_mark -module -b priority_encoder 6
+
+############################################################################
+iccr> mark -ignore -module -b priority_encoder 6
+
+############################################################################
+iccr> undo_mark -module -b mux81 3
+
+############################################################################
+iccr> mark -ignore -module -b mux81 3
+
+############################################################################
+iccr> undo_mark -module -b mux81 4
+
+############################################################################
+iccr> mark -ignore -module -b mux81 4
+
+############################################################################
+iccr> undo_mark -module -b mux81 5
+
+############################################################################
+iccr> mark -ignore -module -b mux81 5
+
+############################################################################
+iccr> undo_mark -module -b mux81 6
+
+############################################################################
+iccr> mark -ignore -module -b mux81 6
+
+############################################################################
+iccr> undo_mark -module -b mux81 7
+
+############################################################################
+iccr> mark -ignore -module -b mux81 7
+
+############################################################################
+iccr> undo_mark -module -b mux81 8
+
+############################################################################
+iccr> mark -ignore -module -b mux81 8
+
+############################################################################
+iccr> undo_mark -module -b mux81 9
+
+############################################################################
+iccr> mark -ignore -module -b mux81 9
+
+############################################################################
+iccr> undo_mark -module -b mux81 10
+
+############################################################################
+iccr> mark -ignore -module -b mux81 10
+
+############################################################################
+iccr> undo_mark -module -b mux16_1 14
+
+############################################################################
+iccr> mark -ignore -module -b mux16_1 14
+
+############################################################################
+iccr> undo_mark -module -b mux16_1 15
+
+############################################################################
+iccr> mark -ignore -module -b mux16_1 15
+
+############################################################################
+iccr> undo_mark -module -b mux16_1 16
+
+############################################################################
+iccr> mark -ignore -module -b mux16_1 16
+
+############################################################################
+iccr> undo_mark -module -b mux16_1 17
+
+############################################################################
+iccr> mark -ignore -module -b mux16_1 17
+
+############################################################################
+iccr> undo_mark -module -b counter_nbit 4
+
+############################################################################
+iccr> mark -ignore -module -b counter_nbit 4
+
+############################################################################
+iccr> undo_mark -module -b counter_nbit 6
+
+############################################################################
+iccr> mark -ignore -module -b counter_nbit 6
+
+############################################################################
+iccr> undo_mark -module -b counter_nbit 7
+
+############################################################################
+iccr> mark -ignore -module -b counter_nbit 7
+
+############################################################################
+iccr> undo_mark -module -b counter_nbit 8
+
+############################################################################
+iccr> mark -ignore -module -b counter_nbit 8
+
+############################################################################
+iccr> undo_mark -module -b counter_nbit 10
+
+############################################################################
+iccr> mark -ignore -module -b counter_nbit 10
+
+############################################################################
+iccr> undo_mark -module -b counter_nbit 11
+
+############################################################################
+iccr> mark -ignore -module -b counter_nbit 11
+
+############################################################################
+iccr> undo_mark -module -b counter_nbit 12
+
+############################################################################
+iccr> mark -ignore -module -b counter_nbit 12
+
+############################################################################
+iccr> undo_mark -module -b shift_reg_nbit 5
+
+############################################################################
+iccr> mark -ignore -module -b shift_reg_nbit 5
+
+############################################################################
+iccr> undo_mark -module -b shift_reg_nbit 8
+
+############################################################################
+iccr> mark -ignore -module -b shift_reg_nbit 8
+
+############################################################################
+iccr> undo_mark -module -b apb_i2c_man_sub_intf 8
+
+############################################################################
+iccr> mark -ignore -module -b apb_i2c_man_sub_intf 8
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 66
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 66
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 8
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 8
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 11
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 11
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 14
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 14
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 17
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 17
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 23
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 23
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 25
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 25
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 29
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 33
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 33
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 43
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 43
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 44
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 44
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 46
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 46
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 49
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 49
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 51
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 51
+
+############################################################################
+iccr> undo_mark -module -b mst_ctrl_fsm 55
+
+############################################################################
+iccr> mark -ignore -module -b mst_ctrl_fsm 55
+
+############################################################################
+iccr> undo_mark -module -b apb_sub 11
+
+############################################################################
+iccr> mark -ignore -module -b apb_sub 11
+
+############################################################################
+iccr> undo_mark -module -b apb_sub 16
+
+############################################################################
+iccr> mark -ignore -module -b apb_sub 16
+
+############################################################################
+iccr> undo_mark -module -b tb_top_APB_I2C_master 14
+
+############################################################################
+iccr> mark -ignore -module -b tb_top_APB_I2C_master 14
+
+############################################################################
+iccr> undo_mark -module -e tb_top_APB_I2C_master 3 *
+
+############################################################################
+iccr> mark -ignore -module -e tb_top_APB_I2C_master 3 *
+
+############################################################################
+iccr> 
+
+############################################################################
+iccr> report_html *
+
+Output of report_html command sent to directory: "html_02-23-2024_14~57~17".
+
+############################################################################
+iccr> exit

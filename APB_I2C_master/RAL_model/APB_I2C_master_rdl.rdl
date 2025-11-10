@@ -1,0 +1,39 @@
+addrmap APB_I2C_master_reg_map{
+    littleendian;
+    lsb0;
+
+    reg{
+      regwidth = 32;
+      field {hw=r; sw=rw;  reset=1'h0; name="TWI Interrupt Enable";}      TWIE[0:0] ;
+      field {hw=r; sw=rw;  reset=1'h0; name="TWI Enable Bit";}            TWEN[2:2] ;
+      field {hw=w; sw=r;  reset=1'h0; name="TWI Write Collision Flag";}   TWWC[3:3] ;
+      field {hw=w; sw=rw; reset=1'h0; name="TWI STOP Condition Bit";}     TWSTO[4:4];
+      field {hw=r; sw=rw; reset=1'h0; name="TWI START Condition Bit";}    TWSTA[5:5];
+      field {hw=r; sw=rw; reset=1'h0; name="TWI Enable Acknowledge Bit";} TWEA[6:6] ;
+      field {hw=w; sw=rw; reset=1'h0; name="TWI Interrupt Flag";}         TWINT[7:7];
+    } TWCR @0x00;
+    
+    reg{
+      regwidth = 32;
+      field {hw=rw; sw=rw; reset=8'hFF; name="TWI Data Register";}        TWDR_[7:0];
+    } TWDR @0x04;
+
+    reg{
+      regwidth = 32;
+      field {hw=r; sw=rw; reset=2'h0; name="TWI Prescaler Bits";}         TWS[1:0];
+      field {hw=w; sw=r;  reset=5'b11111; name="TWI Status";}             TWPS[7:3];
+    } TWSR @0x08;
+
+    reg{
+      regwidth = 32;
+      field {hw=r; sw=rw; reset=1'h0; name="TWI General Call Recognition Enable Bit";} TWGCE[0:0];
+      field {hw=r; sw=rw; reset=7'b1111111; name="TWI (Slave) Address Register";}      TWA[7:1];
+    } TWAR @0x0c;
+
+    reg{
+      regwidth = 32;
+      field {hw=r; sw=rw; reset=8'h0; name="TWI bit rate register";} TWBR_[7:0];
+    } TWBR @0x10; 
+};
+
+
