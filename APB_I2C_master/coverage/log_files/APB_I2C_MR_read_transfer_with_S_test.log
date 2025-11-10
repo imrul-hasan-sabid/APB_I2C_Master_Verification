@@ -1,0 +1,113 @@
+irun(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s086: Started on Feb 22, 2024 at 16:02:28 +06
+irun
+	-f filelist.f
+		+incdir+../rtl_sadman
+		../rtl_sadman/top.sv
+		../rtl_sadman/sta_sto_gen.sv
+		../rtl_sadman/standard_macros.sv
+		../rtl_sadman/scl_gen.sv
+		../rtl_sadman/mst_ctrl_fsm.sv
+		../rtl_sadman/edge_det.sv
+		../rtl_sadman/apb_i2c_man_sub_intf.sv
+		../rtl_sadman/apb_sub.sv
+		../tb/tb_top/APB_I2C_master_interface.sv
+		../RAL_model/APB_I2C_master_ral_model.sv
+		+incdir+../tb/agents/I2C_agent/
+		../tb/agents/I2C_agent/I2C_agent_pkg.sv
+		+incdir+../tb/agents/APB_agent/
+		../tb/agents/APB_agent/apb_agent_pkg.sv
+		+incdir+../tb/env/
+		../tb/env/env_pkg.sv
+		+incdir+../tb/seqlib/
+		../tb/seqlib/seqlib_pkg.sv
+		+incdir+../tb/tests/
+		../tb/tests/test_pkg.sv
+		../tb/tb_top/tb_top_APB_I2C_master.sv
+	-uvm
+	+UVM_NO_RELNOTES
+	-timescale 1ns/1ns
+	+UVM_TESTNAME=APB_I2C_MR_read_transfer_with_S_test
+	+UVM_VERBOSITY=UVM_NONE
+	-coverage all
+	-covtest APB_I2C_MR_read_transfer_with_S_test
+	-covfile ccffile.ccf
+	+test_itter=5
+	-define assert_on
+	-seed random
+
+   User defined plus("+") options:
+	+UVM_NO_RELNOTES
+	+UVM_VERBOSITY=UVM_NONE
+	+test_itter=5
+
+Loading snapshot worklib.tff:sv .................... Done
+SVSEED set randomly from command line: 769175768
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> source /tools/cadence/IUS15.2.082/tools/inca/files/ncsimrc
+ncsim> source /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+ncsim> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (15.20-s086)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+UVM_INFO @ 0: reporter [RNTST] Running test APB_I2C_MR_read_transfer_with_S_test...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(24) @ 0: uvm_test_top [uvm_test_top] test_itter = 5
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(98) @ 42979160000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] --------------------------------------
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(99) @ 42979160000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] ----             PASSED           ----
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(100) @ 42979160000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] --------------------------------------
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(107) @ 42979160000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] Total Test        = 4955
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(108) @ 42979160000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] Total Test Passed = 4955
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(109) @ 42979160000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] Total Test Failed = 0
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    8
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[APB_I2C_master_scoreboard]     6
+[RNTST]     1
+[uvm_test_top]     1
+Simulation complete via $finish(1) at time 42979160 NS + 55
+/tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+ncsim> exit
+ncsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.apb_bus_cov" will be generated for covergroup instance "apb_bus_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 19.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.TWDR_cov" will be generated for covergroup instance "TWDR_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 42.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.TWSR_cov" will be generated for covergroup instance "TWSR_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 57.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.TWAR_cov" will be generated for covergroup instance "TWAR_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 93.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.TWBR_cov" will be generated for covergroup instance "TWBR_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 109.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.TWCR_cov" will be generated for covergroup instance "TWCR_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 124.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.config_combination_cov" will be generated for covergroup instance "config_combination_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 159.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tff(tff)
+  dutinst  :  jkff(jkff)
+  dutinst  :  full_adder(full_adder)
+  dutinst  :  priority_encoder(priority_encoder)
+  dutinst  :  mux81(mux81)
+  dutinst  :  tb_top_APB_I2C_master(tb_top_APB_I2C_master)
+  scope    :  scope
+  testname :  APB_I2C_MR_read_transfer_with_S_test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_04564a52_64d38170.ucm (reused)
+  data               :  ./cov_work/scope/APB_I2C_MR_read_transfer_with_S_test/icc_04564a52_64d38170.ucd
+TOOL:	irun(64)	15.20-s086: Exiting on Feb 22, 2024 at 16:02:38 +06  (total: 00:00:10)

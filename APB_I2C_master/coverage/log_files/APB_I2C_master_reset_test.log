@@ -1,0 +1,767 @@
+irun(64): 15.20-s086: (c) Copyright 1995-2020 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s086: Started on Feb 22, 2024 at 16:00:54 +06
+irun
+	-f filelist.f
+		+incdir+../rtl_sadman
+		../rtl_sadman/top.sv
+		../rtl_sadman/sta_sto_gen.sv
+		../rtl_sadman/standard_macros.sv
+		../rtl_sadman/scl_gen.sv
+		../rtl_sadman/mst_ctrl_fsm.sv
+		../rtl_sadman/edge_det.sv
+		../rtl_sadman/apb_i2c_man_sub_intf.sv
+		../rtl_sadman/apb_sub.sv
+		../tb/tb_top/APB_I2C_master_interface.sv
+		../RAL_model/APB_I2C_master_ral_model.sv
+		+incdir+../tb/agents/I2C_agent/
+		../tb/agents/I2C_agent/I2C_agent_pkg.sv
+		+incdir+../tb/agents/APB_agent/
+		../tb/agents/APB_agent/apb_agent_pkg.sv
+		+incdir+../tb/env/
+		../tb/env/env_pkg.sv
+		+incdir+../tb/seqlib/
+		../tb/seqlib/seqlib_pkg.sv
+		+incdir+../tb/tests/
+		../tb/tests/test_pkg.sv
+		../tb/tb_top/tb_top_APB_I2C_master.sv
+	-uvm
+	+UVM_NO_RELNOTES
+	-timescale 1ns/1ns
+	+UVM_TESTNAME=APB_I2C_master_reset_test
+	+UVM_VERBOSITY=UVM_NONE
+	-coverage all
+	-covtest APB_I2C_master_reset_test
+	-covfile ccffile.ccf
+	+test_itter=5
+	-define assert_off
+	-seed random
+
+   User defined plus("+") options:
+	+UVM_NO_RELNOTES
+	+UVM_VERBOSITY=UVM_NONE
+	+test_itter=5
+
+Compiling UVM packages (uvm_pkg.sv cdns_uvm_pkg.sv) using uvmhome location /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d
+file: ../rtl_sadman/top.sv
+	module worklib.top:sv
+		errors: 0, warnings: 0
+file: ../rtl_sadman/sta_sto_gen.sv
+	module worklib.sta_sto_gen:sv
+		errors: 0, warnings: 0
+file: ../rtl_sadman/standard_macros.sv
+	module worklib.dff:sv
+		errors: 0, warnings: 0
+	module worklib.tff:sv
+		errors: 0, warnings: 0
+	module worklib.jkff:sv
+		errors: 0, warnings: 0
+	module worklib.full_adder:sv
+		errors: 0, warnings: 0
+	module worklib.half_adder:sv
+		errors: 0, warnings: 0
+	module worklib.shift_reg_nbit:sv
+		errors: 0, warnings: 0
+	module worklib.priority_encoder:sv
+		errors: 0, warnings: 0
+	module worklib.mux41:sv
+		errors: 0, warnings: 0
+	module worklib.mux81:sv
+		errors: 0, warnings: 0
+	module worklib.mux16_1:sv
+		errors: 0, warnings: 0
+	module worklib.counter_nbit:sv
+		errors: 0, warnings: 0
+	module worklib.comparator_nbit:sv
+		errors: 0, warnings: 0
+	module worklib.barrel_shifter_nbit:sv
+		errors: 0, warnings: 0
+file: ../rtl_sadman/scl_gen.sv
+	output  logic                               scl_gen_comp_match,   // SCL generator internal clock clear signal 
+	     |
+ncvlog: *W,POLICI (../rtl_sadman/scl_gen.sv,20|6): comma assumed just prior to this symbol to separate declarations in ANSI port list.
+	module worklib.scl_gen:sv
+		errors: 0, warnings: 1
+file: ../rtl_sadman/mst_ctrl_fsm.sv
+	module worklib.mst_ctrl_fsm:sv
+		errors: 0, warnings: 0
+file: ../rtl_sadman/edge_det.sv
+	module worklib.edge_det:sv
+		errors: 0, warnings: 0
+file: ../rtl_sadman/apb_i2c_man_sub_intf.sv
+	module worklib.apb_i2c_man_sub_intf:sv
+		errors: 0, warnings: 0
+file: ../rtl_sadman/apb_sub.sv
+	module worklib.apb_sub:sv
+		errors: 0, warnings: 0
+file: ../tb/tb_top/APB_I2C_master_interface.sv
+	interface worklib.APB_I2C_master_interface:sv
+		errors: 0, warnings: 0
+file: ../RAL_model/APB_I2C_master_ral_model.sv
+	package worklib.APB_I2C_master_ral_model:sv
+		errors: 0, warnings: 0
+file: ../tb/agents/I2C_agent/I2C_agent_pkg.sv
+	package worklib.I2C_agent_pkg:sv
+		errors: 0, warnings: 0
+file: ../tb/agents/APB_agent/apb_agent_pkg.sv
+	package worklib.apb_agent_pkg:sv
+		errors: 0, warnings: 0
+file: ../tb/env/env_pkg.sv
+	package worklib.env_pkg:sv
+		errors: 0, warnings: 0
+file: ../tb/seqlib/seqlib_pkg.sv
+            reg_blk.TWSR.randomize();
+                                 |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,100|33): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 100, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+            reg_blk.TWBR.randomize();
+                                 |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,106|33): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 106, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                    reg_blk.TWDR.randomize();
+                                         |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1446|41): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1446, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+            reg_blk.TWDR.randomize();
+                                 |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1463|33): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1463, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                            reg_blk.TWDR.randomize();
+                                                 |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1481|49): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1481, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                    reg_blk.TWDR.randomize();
+                                         |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1491|41): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1491, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                            reg_blk.TWDR.randomize();
+                                                 |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1510|49): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1510, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                    reg_blk.TWDR.randomize();
+                                         |
+ncvlog: *W,FUNTSK (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1519|41): function called as a task without void'().
+(`include file: ../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv line 1519, file: ../tb/seqlib/seqlib_pkg.sv line 10)
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,221|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,221|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,222|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,222|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,223|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,223|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,224|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,224|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,228|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,228|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,231|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,231|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,234|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,234|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,237|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,237|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,246|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,246|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,247|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,247|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,248|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,248|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);            
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,249|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);            
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,249|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,254|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,254|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,257|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWSR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,257|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,260|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWAR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,260|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);            
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,263|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWBR.read(status);            
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,263|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP1 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1917|32): task or function call does not specify all formal output arguments [10.2.2][10.3(IEEE)].
+                reg_blk.TWDR.read(status);
+                                |
+ncvlog: *W,FAAOP2 (../tb/seqlib//APB_I2C_master_basic_virtual_sequence.sv,1917|32): Formal output argument 'value' is absent in the task or function call identified by the previous error message [10.2.2][10.3(IEEE)].
+	package worklib.seqlib_pkg:sv
+		errors: 0, warnings: 42
+file: ../tb/tests/test_pkg.sv
+	package worklib.test_pkg:sv
+		errors: 0, warnings: 0
+file: ../tb/tb_top/tb_top_APB_I2C_master.sv
+	module worklib.tb_top_APB_I2C_master:sv
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+) u_bit_count_comparator (
+                       |
+ncelab: *W,CUVWSP (../rtl_sadman/top.sv,200|23): 2 output ports were not connected:
+ncelab: (../rtl_sadman/standard_macros.sv,314): g
+ncelab: (../rtl_sadman/standard_macros.sv,315): l
+
+) u_comparator_nbit_bit_cnt(
+                          |
+ncelab: *W,CUVWSP (../rtl_sadman/scl_gen.sv,65|26): 2 output ports were not connected:
+ncelab: (../rtl_sadman/standard_macros.sv,314): g
+ncelab: (../rtl_sadman/standard_macros.sv,315): l
+
+) u_comparator_nbit_start(
+                        |
+ncelab: *W,CUVWSP (../rtl_sadman/scl_gen.sv,96|24): 2 output ports were not connected:
+ncelab: (../rtl_sadman/standard_macros.sv,314): g
+ncelab: (../rtl_sadman/standard_macros.sv,315): l
+
+) u_half_adder_1_plus_m1(
+                       |
+ncelab: *W,CUVWSP (../rtl_sadman/scl_gen.sv,121|23): 1 output port was not connected:
+ncelab: (../rtl_sadman/standard_macros.sv,96): carry_out
+
+) u_half_adder_16_plus_m2(
+                        |
+ncelab: *W,CUVWSP (../rtl_sadman/scl_gen.sv,146|24): 1 output port was not connected:
+ncelab: (../rtl_sadman/standard_macros.sv,96): carry_out
+
+	Top level design units:
+		uvm_pkg
+		cdns_uvmapi
+		cdns_assert2uvm_pkg
+		cdns_uvm_pkg
+		APB_I2C_master_ral_model
+		apb_agent_pkg
+		I2C_agent_pkg
+		env_pkg
+		seqlib_pkg
+		test_pkg
+		$unit_0x47cf98d3
+		tff
+		jkff
+		full_adder
+		priority_encoder
+		mux81
+		tb_top_APB_I2C_master
+`uvm_analysis_imp_decl(_I2C_mnt2scb)
+                                   |
+ncelab: *W,FUNTSK (../tb/env/APB_I2C_master_scoreboard.sv,2|35): function called as a task without void'().
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+
+	Extracting FSMs for coverage:
+		worklib.tff
+		worklib.jkff
+		worklib.full_adder
+		worklib.priority_encoder
+		worklib.mux81
+		worklib.dff
+		worklib.apb_sub
+		worklib.apb_i2c_man_sub_intf
+		worklib.mst_ctrl_fsm
+		worklib.shift_reg_nbit
+		worklib.counter_nbit
+		worklib.comparator_nbit
+		worklib.edge_det
+		worklib.mux41
+		worklib.sta_sto_gen
+		worklib.barrel_shifter_nbit
+		worklib.half_adder
+		worklib.scl_gen
+		worklib.mux16_1
+		worklib.top
+		worklib.tb_top_APB_I2C_master
+	Total FSMs extracted = 0
+    .mst_ctrl_fsm_twsr_d_sel            (mst_ctrl_fsm_twsr_d_sel[STATUS_SEL_WIDTH-1:0]),
+                                                               |
+ncelab: *W,CUVMPW (../rtl_sadman/top.sv,146|63): port sizes differ in port connection (4/5).
+    .mst_ctrl_fsm_twdr_mode             (mst_ctrl_fsm_twdr_mode[MODE_WIDTH-1:0]),
+                                                              |
+ncelab: *W,CUVMPW (../rtl_sadman/top.sv,148|62): port sizes differ in port connection (2/3).
+	.a              (h2[15:0]/2), 
+	                         |
+ncelab: *W,CUVMPW (../rtl_sadman/scl_gen.sv,67|26): port sizes differ in port connection (32/16).
+	.a              (h2[15:0]), 
+	                  |
+ncelab: *W,CUVMPW (../rtl_sadman/scl_gen.sv,98|19): port sizes differ in port connection (16/17).
+    .mst_ctrl_fsm_twsr_d_sel            (mst_ctrl_fsm_twsr_d_sel[STATUS_SEL_WIDTH-1:0]),
+                                                               |
+ncelab: *W,CUVMPW (../rtl_sadman/top.sv,146|63): port sizes differ in port connection (4/5).
+    .mst_ctrl_fsm_twdr_mode             (mst_ctrl_fsm_twdr_mode[MODE_WIDTH-1:0]),
+                                                              |
+ncelab: *W,CUVMPW (../rtl_sadman/top.sv,148|62): port sizes differ in port connection (2/3).
+	.a              (h2[15:0]/2), 
+	                         |
+ncelab: *W,CUVMPW (../rtl_sadman/scl_gen.sv,67|26): port sizes differ in port connection (32/16).
+	.a              (h2[15:0]), 
+	                  |
+ncelab: *W,CUVMPW (../rtl_sadman/scl_gen.sv,98|19): port sizes differ in port connection (16/17).
+	Building instance overlay tables: .................... Done
+	Enabling instrumentation for coverage types: block expression FSM toggle functional
+ncelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
+	Generating native compiled code:
+		worklib.APB_I2C_master_interface:sv <0x315f2724>
+			streams:   8, words:  3964
+		worklib.APB_I2C_master_interface:sv <0x766f52a4>
+			streams:   8, words:  3964
+		worklib.APB_I2C_master_ral_model:sv <0x30bf671c>
+			streams:   6, words:  6809
+		worklib.APB_I2C_master_ral_model:sv <0x3664ec13>
+			streams:   6, words: 16430
+		worklib.APB_I2C_master_ral_model:sv <0x3b634ad5>
+			streams:   6, words:  6813
+		worklib.APB_I2C_master_ral_model:sv <0x416b62ec>
+			streams:   6, words: 19226
+		worklib.APB_I2C_master_ral_model:sv <0x43ee2c30>
+			streams:   6, words:  4880
+		worklib.APB_I2C_master_ral_model:sv <0x4d4133bb>
+			streams:   6, words:  4882
+		worklib.APB_I2C_master_ral_model:sv <0x5923e4a4>
+			streams:   0, words:     0
+		worklib.I2C_agent_pkg:sv <0x56324dd1>
+			streams:   0, words:     0
+		worklib.apb_agent_pkg:sv <0x565e8919>
+			streams:   0, words:     0
+		worklib.apb_i2c_man_sub_intf:sv <0x4dbccc95>
+			streams:  32, words: 24431
+		worklib.apb_sub:sv <0x7b1899a7>
+			streams:   8, words: 10534
+		worklib.barrel_shifter_nbit:sv <0x531d36a3>
+			streams:   1, words:   631
+		worklib.barrel_shifter_nbit:sv <0x7b3da6bc>
+			streams:   1, words:   658
+		worklib.cdns_assert2uvm_pkg:sv <0x3d7c7bc0>
+			streams:   3, words:  2548
+		worklib.cdns_uvm_pkg:sv <0x3c6e6e33>
+			streams: 136, words: 294887
+		worklib.cdns_uvm_pkg:sv <0x4ac74bf6>
+			streams:  28, words: 46393
+		worklib.cdns_uvm_pkg:sv <0x6b420e52>
+			streams:   9, words:  6355
+		worklib.cdns_uvm_pkg:sv <0x7ead08e7>
+			streams:  10, words:  9567
+		worklib.cdns_uvmapi:svp <0x2435e8ed>
+			streams:  27, words: 37588
+		worklib.comparator_nbit:sv <0x148969df>
+			streams:   1, words:  1039
+		worklib.comparator_nbit:sv <0x46fa9bb4>
+			streams:   1, words:  1039
+		worklib.comparator_nbit:sv <0x79435da4>
+			streams:   1, words:  1024
+		worklib.counter_nbit:sv <0x05cf4be7>
+			streams:  11, words:  6479
+		worklib.counter_nbit:sv <0x10a10c73>
+			streams:  11, words:  6369
+		worklib.counter_nbit:sv <0x6939fb82>
+			streams:  11, words:  6479
+		worklib.dff:sv <0x239d6916>
+			streams:   3, words:  1301
+		worklib.dff:sv <0x2c765652>
+			streams:   3, words:  1291
+		worklib.dff:sv <0x38f9d179>
+			streams:   3, words:  1325
+		worklib.dff:sv <0x46e597c0>
+			streams:   3, words:  1263
+		worklib.dff:sv <0x4e485e6e>
+			streams:   3, words:  1325
+		worklib.dff:sv <0x705e91fe>
+			streams:   3, words:  1301
+		worklib.dff:sv <0x7db51441>
+			streams:   3, words:  1291
+		worklib.edge_det:sv <0x7cdf79e4>
+			streams:   2, words:  1428
+		worklib.env_pkg:sv <0x08cf7c31>
+			streams:   0, words:     0
+		worklib.full_adder:sv <0x1d2f2fe9>
+			streams:   1, words:   604
+		worklib.half_adder:sv <0x21822366>
+			streams:   1, words:   644
+		worklib.half_adder:sv <0x5b8d7860>
+			streams:   1, words:   623
+		worklib.jkff:sv <0x43b895cc>
+			streams:   2, words:   998
+		worklib.mst_ctrl_fsm:sv <0x4d55a2f2>
+			streams:  11, words: 45794
+		worklib.mux16_1:sv <0x79379d05>
+			streams:   1, words:  7841
+		worklib.mux41:sv <0x389a962f>
+			streams:   1, words:  2224
+		worklib.mux41:sv <0x57637ec8>
+			streams:   1, words:  2181
+		worklib.mux81:sv <0x492fb87a>
+			streams:   1, words:  2976
+		worklib.priority_encoder:sv <0x1167ed42>
+			streams:   1, words:  1524
+		worklib.scl_gen:sv <0x1c982081>
+			streams:  29, words:  9430
+		worklib.seqlib_pkg:sv <0x138df48b>
+			streams:   0, words:     0
+		worklib.seqlib_pkg:sv <0x41bc6ac7>
+			streams:  38, words: 100134
+		worklib.shift_reg_nbit:sv <0x35948b8a>
+			streams:   6, words:  3265
+		worklib.sta_sto_gen:sv <0x1a319098>
+			streams:   6, words:  2683
+		worklib.tb_top_APB_I2C_master:sv <0x7c49ae55>
+			streams: 234, words: 244553
+		worklib.test_pkg:sv <0x66587028>
+			streams:   0, words:     0
+		worklib.test_pkg:sv <0x6c440948>
+			streams:  45, words: 150659
+		worklib.tff:sv <0x789a4a4b>
+			streams:   2, words:   615
+		worklib.top:sv <0x488e131c>
+			streams: 105, words: 41270
+		worklib.top:sv <0x7deb77ea>
+			streams: 105, words: 41270
+		worklib.uvm_pkg:sv <0x014ebaab>
+			streams:  22, words: 68725
+		worklib.uvm_pkg:sv <0x01c36a9a>
+			streams:  27, words: 38046
+		worklib.uvm_pkg:sv <0x052293a7>
+			streams:  29, words: 121403
+		worklib.uvm_pkg:sv <0x053f4535>
+			streams:  25, words: 32179
+		worklib.uvm_pkg:sv <0x05bbde1c>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x06db5d78>
+			streams:  33, words: 80391
+		worklib.uvm_pkg:sv <0x0828948f>
+			streams:  43, words: 105281
+		worklib.uvm_pkg:sv <0x09cd9b59>
+			streams:   9, words:  3363
+		worklib.uvm_pkg:sv <0x0a3ecd0a>
+			streams:  26, words: 58615
+		worklib.uvm_pkg:sv <0x0b2cfc1b>
+			streams:   7, words:  1863
+		worklib.uvm_pkg:sv <0x0e41f0dc>
+			streams:  41, words: 97978
+		worklib.uvm_pkg:sv <0x0fb0e0f4>
+			streams:  31, words: 61852
+		worklib.uvm_pkg:sv <0x101afa7c>
+			streams: 110, words: 226715
+		worklib.uvm_pkg:sv <0x10ba1102>
+			streams:  41, words: 99934
+		worklib.uvm_pkg:sv <0x11282dd2>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x140d9692>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x164957dc>
+			streams:  25, words: 34567
+		worklib.uvm_pkg:sv <0x18059ab3>
+			streams:  93, words: 185210
+		worklib.uvm_pkg:sv <0x1bd68d59>
+			streams:  25, words: 34026
+		worklib.uvm_pkg:sv <0x1d5770ae>
+			streams:  16, words: 26035
+		worklib.uvm_pkg:sv <0x1fea9a12>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x20b098b2>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x20fbe8b8>
+			streams:  33, words: 79513
+		worklib.uvm_pkg:sv <0x223a5cd1>
+			streams:  31, words: 87026
+		worklib.uvm_pkg:sv <0x22fe1d91>
+			streams:  25, words: 71057
+		worklib.uvm_pkg:sv <0x2503041f>
+			streams:   8, words:  8701
+		worklib.uvm_pkg:sv <0x25742bc9>
+			streams:   7, words:  7615
+		worklib.uvm_pkg:sv <0x25ead373>
+			streams:  33, words: 79746
+		worklib.uvm_pkg:sv <0x263a6b15>
+			streams:  27, words: 45332
+		worklib.uvm_pkg:sv <0x2a860a7c>
+			streams:   7, words:  3230
+		worklib.uvm_pkg:sv <0x2ac21170>
+			streams:  33, words: 75941
+		worklib.uvm_pkg:sv <0x2d005a13>
+			streams:  31, words: 60124
+		worklib.uvm_pkg:sv <0x2f4de487>
+			streams:  33, words: 112754
+		worklib.uvm_pkg:sv <0x2fc6aa84>
+			streams:  71, words: 153819
+		worklib.uvm_pkg:sv <0x3061f6ea>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x31a03b55>
+			streams:  28, words: 36570
+		worklib.uvm_pkg:sv <0x331aaf8c>
+			streams: 129, words: 224237
+		worklib.uvm_pkg:sv <0x35161987>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x372312e1>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x376cc7d5>
+			streams:  23, words: 31531
+		worklib.uvm_pkg:sv <0x39db7f64>
+			streams:  26, words: 40317
+		worklib.uvm_pkg:sv <0x3b534ede>
+			streams:  24, words: 51401
+		worklib.uvm_pkg:sv <0x3ba08c96>
+			streams:  25, words: 37157
+		worklib.uvm_pkg:sv <0x3bcc85ac>
+			streams:  25, words: 55459
+		worklib.uvm_pkg:sv <0x3c8ad86d>
+			streams:  29, words: 51121
+		worklib.uvm_pkg:sv <0x3cbeb3c5>
+			streams:  27, words: 34042
+		worklib.uvm_pkg:sv <0x3d7d3e57>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x3db585ee>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x3df90f56>
+			streams: 219, words: 338364
+		worklib.uvm_pkg:sv <0x4073947b>
+			streams:  24, words: 27645
+		worklib.uvm_pkg:sv <0x40a35e5e>
+			streams:  25, words: 57177
+		worklib.uvm_pkg:sv <0x4139e838>
+			streams:  27, words: 55738
+		worklib.uvm_pkg:sv <0x41b1ba46>
+			streams: 219, words: 338352
+		worklib.uvm_pkg:sv <0x42054ae0>
+			streams:   7, words:  1863
+		worklib.uvm_pkg:sv <0x421c4920>
+			streams:  26, words: 34958
+		worklib.uvm_pkg:sv <0x466e4d02>
+			streams: 129, words: 224237
+		worklib.uvm_pkg:sv <0x48da883f>
+			streams:  31, words: 56225
+		worklib.uvm_pkg:sv <0x4a78028e>
+			streams:  24, words: 31513
+		worklib.uvm_pkg:sv <0x4ac485b8>
+			streams:  17, words: 17683
+		worklib.uvm_pkg:sv <0x4be7ffd8>
+			streams:  25, words: 64630
+		worklib.uvm_pkg:sv <0x4ce9e0ad>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x4e10be8b>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x50ba1b6a>
+			streams:  27, words: 48495
+		worklib.uvm_pkg:sv <0x526381e2>
+			streams:  25, words: 34567
+		worklib.uvm_pkg:sv <0x532abfb3>
+			streams:  25, words: 30047
+		worklib.uvm_pkg:sv <0x53d0c48a>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x58ef88b8>
+			streams:   7, words:  3230
+		worklib.uvm_pkg:sv <0x595c2b1d>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x5983c14d>
+			streams:   7, words:  2385
+		worklib.uvm_pkg:sv <0x5a530e55>
+			streams:  26, words: 42364
+		worklib.uvm_pkg:sv <0x5bad1183>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x5bc90426>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x5c1f7ee1>
+			streams:  82, words: 124242
+		worklib.uvm_pkg:sv <0x5c7ac4ac>
+			streams:  25, words: 63081
+		worklib.uvm_pkg:sv <0x5d60a08f>
+			streams:  51, words: 64546
+		worklib.uvm_pkg:sv <0x5e1b8210>
+			streams:  37, words: 86717
+		worklib.uvm_pkg:sv <0x6087d45b>
+			streams:  25, words: 62262
+		worklib.uvm_pkg:sv <0x60cd8175>
+			streams:  27, words: 43073
+		worklib.uvm_pkg:sv <0x620a0a77>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x62b160ab>
+			streams:  29, words: 66569
+		worklib.uvm_pkg:sv <0x63fd3635>
+			streams:  29, words: 51150
+		worklib.uvm_pkg:sv <0x66507bb3>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x67c4dea7>
+			streams:  29, words: 75143
+		worklib.uvm_pkg:sv <0x6adc392d>
+			streams: 4718, words: 10525866
+		worklib.uvm_pkg:sv <0x6bcb5a37>
+			streams:  25, words: 66992
+		worklib.uvm_pkg:sv <0x6cae5fc7>
+			streams:  49, words: 93774
+		worklib.uvm_pkg:sv <0x6cfe81e4>
+			streams:   9, words:  5923
+		worklib.uvm_pkg:sv <0x6ec1b737>
+			streams:  25, words: 69385
+		worklib.uvm_pkg:sv <0x71b7578f>
+			streams:  93, words: 183073
+		worklib.uvm_pkg:sv <0x75a5a704>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x7762b89e>
+			streams:  37, words: 83886
+		worklib.uvm_pkg:sv <0x77a5588c>
+			streams:  25, words: 39175
+		worklib.uvm_pkg:sv <0x78b0c6d7>
+			streams:  31, words: 57873
+		worklib.uvm_pkg:sv <0x7a3ce84f>
+			streams:   7, words:  3230
+		worklib.uvm_pkg:sv <0x7cf019cc>
+			streams:  27, words: 46230
+		worklib.uvm_pkg:sv <0x7ddf45e7>
+			streams:  27, words: 77227
+		worklib.uvm_pkg:sv <0x7ef3f34d>
+			streams:   8, words:  8256
+int count_cycle=0;
+              |
+ncelab: *W,COVUTA (../tb/tb_top/tb_top_APB_I2C_master.sv,118|14): Toggle coverage is not supported for SystemVerilog integer, real, string, dynamic array, sparse memory, and array of enum. It is also not supported for VHDL multi-dimensional array and array of record. There may also be other such objects in the design.
+	Building instance specific data structures.
+ncelab: *W,CGPIDF: Covergroup "per_instance" option , by default, is set as 0.
+ncelab: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+	Loading native compiled code:     .................... Done
+ncelab: *W,PSEFDM: The pattern "scl_gen.cntr_val_start\[([15-16])\]" specified on line 47 of file "exfile.txt" did not result in exclusion of any signal(s).
+ncelab: *W,PSEFDM: The pattern "scl_gen.cntr_val\[([14-15])\]" specified on line 46 of file "exfile.txt" did not result in exclusion of any signal(s).
+	Design hierarchy summary:
+		                       Instances  Unique
+		Modules:                      76      21
+		Interfaces:                    2       1
+		Verilog packages:             10      10
+		Registers:                 18090   11736
+		Scalar wires:                503       -
+		Vectored wires:              251       -
+		Named events:                  4      12
+		Always blocks:               167     120
+		Initial blocks:              503     249
+		Parallel blocks:             107     108
+		Cont. assignments:           106      84
+		Pseudo assignments:          315     269
+		Timing checks:                 6       -
+		Assertions:                   41      41
+		Covergroup Instances:          0       7
+		Compilation units:             1       1
+		SV Class declarations:       263     376
+		SV Class specializations:    535     535
+		Simulation timescale:        1ps
+	Writing initial simulation snapshot: worklib.tff:sv
+Loading snapshot worklib.tff:sv .................... Done
+SVSEED set randomly from command line: 114884603
+ncsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+ncsim> source /tools/cadence/IUS15.2.082/tools/inca/files/ncsimrc
+ncsim> source /tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/additions/sv/files/tcl/uvm_sim.tcl
+ncsim> run
+----------------------------------------------------------------
+CDNS-UVM-1.1d (15.20-s086)
+(C) 2007-2013 Mentor Graphics Corporation
+(C) 2007-2013 Cadence Design Systems, Inc.
+(C) 2006-2013 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+----------------------------------------------------------------
+UVM_INFO @ 0: reporter [RNTST] Running test APB_I2C_master_reset_test...
+UVM_INFO ../tb/tests//APB_I2C_master_base_test.sv(24) @ 0: uvm_test_top [uvm_test_top] test_itter = 5
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(98) @ 1696288000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] --------------------------------------
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(99) @ 1696288000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] ----             PASSED           ----
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(100) @ 1696288000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] --------------------------------------
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(107) @ 1696288000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] Total Test        = 2500
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(108) @ 1696288000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] Total Test Passed = 2500
+UVM_INFO ../tb/env//APB_I2C_master_scoreboard.sv(109) @ 1696288000: uvm_test_top.env.scb [APB_I2C_master_scoreboard] Total Test Failed = 0
+
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    8
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[APB_I2C_master_scoreboard]     6
+[RNTST]     1
+[uvm_test_top]     1
+Simulation complete via $finish(1) at time 1696288 NS + 54
+/tools/cadence/IUS15.2.082/tools/methodology/UVM/CDNS-1.1d/sv/src/base/uvm_root.svh:457     $finish;
+ncsim> exit
+ncsim: *N,COVCGN: Coverage configuration file command "set_covergroup -new_instance_reporting" can be specified to improve the scoping and naming of covergroup instances. It may be noted that subsequent merging of a coverage database saved with this command and a coverage database saved without this command is not allowed.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.apb_bus_cov" will be generated for covergroup instance "apb_bus_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 19.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.TWDR_cov" will be generated for covergroup instance "TWDR_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 42.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.TWSR_cov" will be generated for covergroup instance "TWSR_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 57.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.TWAR_cov" will be generated for covergroup instance "TWAR_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 93.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.TWBR_cov" will be generated for covergroup instance "TWBR_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 109.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.TWCR_cov" will be generated for covergroup instance "TWCR_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 124.
+ncsim: *W,CGDEFN: Default name "worklib.uvm_pkg::.config_combination_cov" will be generated for covergroup instance "config_combination_cov" as the name of the covergroup instance is not specified explicitly: ../tb/agents/APB_agent/apb_coverage.sv, 159.
+
+coverage setup:
+  workdir  :  ./cov_work
+  dutinst  :  tff(tff)
+  dutinst  :  jkff(jkff)
+  dutinst  :  full_adder(full_adder)
+  dutinst  :  priority_encoder(priority_encoder)
+  dutinst  :  mux81(mux81)
+  dutinst  :  tb_top_APB_I2C_master(tb_top_APB_I2C_master)
+  scope    :  scope
+  testname :  APB_I2C_master_reset_test
+
+coverage files:
+  model(design data) :  ./cov_work/scope/icc_04564a52_64d38170.ucm
+  data               :  ./cov_work/scope/APB_I2C_master_reset_test/icc_04564a52_64d38170.ucd
+TOOL:	irun(64)	15.20-s086: Exiting on Feb 22, 2024 at 16:01:07 +06  (total: 00:00:13)
